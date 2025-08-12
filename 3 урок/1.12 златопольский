@@ -1,5 +1,0 @@
-# Златопольский 12.1
-a = input('имя ')
-b = input('фамилия ')
-c = list(a) + list(b)
-print(c)
