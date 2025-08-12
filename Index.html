@@ -1,112 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Наши милые моменты</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #fff5f5;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #ff6b88;
-            margin-bottom: 30px;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .photo {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .photo:hover {
-            transform: scale(1.03);
-        }
-        .photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            color: #ff6b88;
-            font-size: 18px;
-        }
-    </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Наша смена — моменты, мемы и улыбки 🤍</title>
+<meta name="description" content="Фотоальбом нашей смены с милыми моментами, мемами и QR-кодом на группу." />
+<meta property="og:title" content="Наша смена — моменты, мемы и улыбки 🤍" />
+<meta property="og:description" content="Фотоальбом нашей смены с милыми моментами, мемами и QR-кодом на группу." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="./IMG_5146.jpg" />
+<meta property="og:url" content="" />
+<style>
+  :root{
+    --bg:#f7f7f7;
+    --card:#fff;
+    --accent:#cfcfcf;
+    --muted:#555;
+    --shadow: 0 6px 18px rgba(0,0,0,0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body{
+    background:var(--bg);
+    margin:0;
+    padding:32px;
+    animation: fadeIn 0.7s ease-in;
+  }
+  @keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
+  .wrap{max-width:1100px;margin:0 auto;}
+  header{text-align:center;margin-bottom:30px;}
+  h1{margin:0;font-size:30px;color:#333;}
+  p.lead{margin:8px 0 0;color:var(--muted);font-size:16px;}
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+  }
+  .card{
+    background:var(--card);
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:transform .18s ease,box-shadow .18s ease;
+    display:flex;
+    flex-direction:column;
+  }
+  .card:hover{transform:scale(1.02);box-shadow:0 12px 30px rgba(0,0,0,0.12);}
+  .thumb{width:100%;height:200px;object-fit:cover;display:block;}
+  .caption{
+    padding:12px;
+    border-top:1px solid var(--accent);
+    font-size:15px;
+    color:#444;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+  .meme{
+    font-style:italic;
+    font-size:13px;
+    color:#777;
+  }
+  footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px;}
+
+  /* Lightbox */
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.75);display:none;align-items:center;justify-content:center;padding:20px;z-index:999;}
+  .lightbox img{max-width:95%;max-height:85%;border-radius:10px;box-shadow:0 20px 40px rgba(0,0,0,0.6);}
+  .close{position:absolute;top:18px;right:20px;font-size:28px;color:#fff;cursor:pointer;}
+</style>
 </head>
 <body>
-    <h1>Наши прекрасные моменты ✨</h1>
-    
-    <div class="gallery">
-        <div class="photo">
-            <img src="IMG_5146.jpg" alt="Милый момент 1">
-        </div>
-        <div class="photo">
-            <img src="IMG_5101.jpg" alt="Милый момент 2">
-        </div>
-        <div class="photo">
-            <img src="IMG_5097.jpg" alt="Милый момент 3">
-        </div>
-        <div class="photo">
-            <img src="IMG_4694.jpg" alt="Милый момент 4">
-        </div>
-        <div class="photo">
-            <img src="IMG_4528.jpg" alt="Милый момент 5">
-        </div>
-        <div class="photo">
-            <img src="IMG_4943.jpg" alt="Милый момент 6">
-        </div>
-        <div class="photo">
-            <img src="IMG_4599.jpg" alt="Милый момент 7">
-        </div>
-        <div class="photo">
-            <img src="IMG_4521.jpg" alt="Милый момент 8">
-        </div>
-        <div class="photo">
-            <img src="IMG_4890.jpg" alt="Милый момент 9">
-        </div>
-        <div class="photo">
-            <img src="IMG_4694.jpg" alt="Милый момент 10">
-        </div>
-        <div class="photo">
-            <img src="IMG_4528.jpg" alt="Милый момент 11">
-        </div>
-        <div class="photo">
-            <img src="IMG_4943.jpg" alt="Милый момент 12">
-        </div>
-        <div class="photo">
-            <img src="IMG_4599.jpg" alt="Милый момент 13">
-        </div>
-        <div class="photo">
-            <img src="IMG_4521.jpg" alt="Милый момент 14">
-        </div>
-        <div class="photo">
-            <img src="IMG_4890.jpg" alt="Милый момент 15">
-        </div>
-        <div class="photo">
-            <img src="IMG_4559.jpg" alt="Милый момент 16">
-        </div>
-        <div class="photo">
-            <img src="IMG_5150.jpg" alt="Милый момент 17">
-        </div>
-    </div>
+  <div class="wrap">
+    <header>
+      <h1>Наша смена — моменты, мемы и улыбки 🤍</h1>
+      <p class="lead">Смешные кадры, тёплые воспоминания и немного мемов для настроения</p>
+    </header>
 
-    <footer>
-        ❤️ Эти моменты мы будем помнить всегда ❤️
-    </footer>
+    <main class="grid">
+      <div class="card"><img class="thumb" src="./IMG_5146.jpg" onclick="openLight(this)"><div class="caption"><span>Когда кто-то сказал: «Фото на память!»</span><span class="meme">— а мы уже забыли, как держать лицо 😆</span></div></div>
+      <div class="card"><img class="thumb" src="./IMG_5101.jpg" onclick="openLight(this)"><div class="caption"><span>Дружеские взгляды</span><span class="meme">— переводятся на любой язык 💬</span></div></div>
+      <div class="card"><img class="thumb" src="./IMG_5097.jpg" onclick="openLight(this)"><div class="caption"><span>Тот самый момент</span><span class="meme">— когда кто-то пошутил, а ты в центре внимания 😂</span></div></div>
+      <div class="card"><img class="thumb" src="./IMG_4694.jpg" onclick="openLight(this)"><div class="caption"><span>Закат и мы</span><span class="meme">— будто афиша к фильму про дружбу 🌅</span></div></div>
+      <div class="card"><img class="thumb" src="./IMG_4528.jpg" onclick="openLight(this)"><div class="caption"><span>Тот случай</span><span class="meme">— когда «давайте по одной фотке» превратилось в 200 📸</span></div></div>
+      <div class="card"><img class="thumb" src="./IMG_4943.jpg" onclick="openLight(this)"><div class="caption"><span>Счастливые лица</span><span class="meme">— ну а как иначе в нашей компании? 💕</span></div></div>
+      <div class="card"><img class="thumb" src="./IMG_4599.jpg" onclick="openLight(this)"><div class="caption"><span>Наши будни</span><span class="meme">— хаос, но уютный 😌</span></div></div>
+      <div class="card"><img class="thumb" src="./IMG_4521.jpg" onclick="openLight(this)"><div class="caption"><span>Фото на бегу</span><span class="meme">— и это видно по нашим лицам 🤭</span></div></div>
+      <div class="card"><img class="thumb" src="./IMG_4890.jpg" onclick="openLight(this)"><div class="caption"><span>Неформальный портрет</span><span class="meme">— «главное, чтобы было весело!» 🥳</span></div></div>
+      <div class="card"><img class="thumb" src="./IMG_4694.jpg" onclick="openLight(this)"><div class="caption"><span>Дежавю</span><span class="meme">— потому что этот кадр уже где-то был 😉</span></div></div>
+      <div class="card"><img class="thumb" src="./IMG_4528.jpg" onclick="openLight(this)"><div class="caption"><span>Ещё раз</span><span class="meme">— и снова мы красавчики 😎</span></div></div>
+      <div class="card"><img class="thumb" src="./IMG_4943.jpg" onclick="openLight(this)"><div class="caption"><span>Атмосфера</span><span class="meme">— в каждой мелочи 🕊️</span></div></div>
+      <div class="card"><img class="thumb" src="./IMG_4599.jpg" onclick="openLight(this)"><div class="caption"><span>Вторая серия</span><span class="meme">— и мы ещё веселее 😂</span></div></div>
+      <div class="card"><img class="thumb" src="./IMG_4521.jpg" onclick="openLight(this)"><div class="caption"><span>Ловите момент</span><span class="meme">— потому что он неповторим 🎯</span></div></div>
+      <div class="card"><img class="thumb" src="./IMG_4890.jpg" onclick="openLight(this)"><div class="caption"><span>Душевно</span><span class="meme">— ну просто душевно ❤️</span></div></div>
+      <div class="card"><img class="thumb" src="./IMG_4559.jpg" onclick="openLight(this)"><div class="caption"><span>Мини-селфи</span><span class="meme">— но зато с атмосферой 🪄</span></div></div>
+      <div class="card"><img class="thumb" src="./IMG_5150.jpg" onclick="openLight(this)"><div class="caption"><span>QR-код на нашу группу</span><span class="meme">— сканируй, чтобы быть с нами онлайн 📱</span></div></div>
+    </main>
+
+    <footer>Спасибо за эту смену — вы лучшие! 💌</footer>
+  </div>
+
+  <div id="lightbox" class="lightbox" onclick="closeLight(event)">
+    <div class="close" onclick="closeLight(event)">✕</div>
+    <img id="lightbox-img" src="" alt="preview">
+  </div>
+
+<script>
+function openLight(img){
+  const lb = document.getElementById('lightbox');
+  const lbimg = document.getElementById('lightbox-img');
+  lbimg.src = encodeURI(img.src);
+  lb.style.display = 'flex';
+}
+function closeLight(e){
+  if(e.target.id === 'lightbox' || e.target.classList.contains('close')){
+    document.getElementById('lightbox').style.display = 'none';
+    document.getElementById('lightbox-img').src = '';
+  }
+}
+</script>
 </body>
 </html>
