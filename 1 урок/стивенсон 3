@@ -1,3 +1,0 @@
-# Стивенсон, упаражнение 26
-import time
-print(time.ctime())
